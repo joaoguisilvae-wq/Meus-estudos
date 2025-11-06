@@ -153,3 +153,25 @@ const c3 = new Caminhão(8, "azul");
 
 console.log(c3);
 console.log(c3.motor);
+
+// 11 - override
+class Humano {
+  constructor(nome, idade) {
+    (this.nome = nome), (this.idade = idade);
+  }
+}
+
+const jg = new Humano("João", 16);
+
+console.log(jg);
+
+console.log(Humano.prototype.idade);
+
+Humano.prototype.idade = "Não definido";
+
+console.log(jg.idade);
+
+console.log(Humano.prototype.idade);
+
+// 12 - symbol
+class Aviao {}
