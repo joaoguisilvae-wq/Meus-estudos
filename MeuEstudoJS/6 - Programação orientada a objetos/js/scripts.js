@@ -174,4 +174,74 @@ console.log(jg.idade);
 console.log(Humano.prototype.idade);
 
 // 12 - symbol
-class Aviao {}
+class Aviao {
+  constructor(marca, turbina) {
+    this.marca = marca;
+    this.turbina = turbina;
+  }
+}
+
+const asas = Symbol();
+const pilotos = Symbol();
+
+Aviao.prototype[asas] = 2;
+Aviao.prototype[pilotos] = 3;
+
+const boing = new Aviao("Boing", 10);
+
+console.log(boing);
+
+console.log(boing[asas]);
+
+console.log(boing[pilotos]);
+
+// 13 - getters e setters
+class Post {
+  constructor(titulo, descricao, tags) {
+    this.titulo = titulo;
+    this.descricao = descricao;
+    this.tags = tags;
+  }
+
+  get exibirTitulo() {
+    return `Você esta lendo: ${this.titulo}`;
+  }
+
+  set adicionarTags(tags) {
+    const tagsArrays = tags.split(", ");
+    this.tags = tagsArrays;
+  }
+}
+
+const myPost = new Post("alguem aq?", "É um post sobre nada");
+
+console.log(myPost);
+console.log(myPost.exibirTitulo);
+
+myPost.adicionarTags = "Programação, JS, Html";
+console.log(myPost);
+
+// 14 - herança
+class Mamifero {
+  constructor(patas) {
+    this.patas = patas;
+  }
+}
+
+class Lobo extends Mamifero {
+  constructor(patas, nome) {
+    super(patas, patas);
+    this.nome = nome;
+  }
+}
+
+const labubu = new Lobo(3, "Labubu");
+console.log(labubu);
+
+// 15 - instaceof
+console.log(labubu instanceof Lobo);
+
+console.log(boing instanceof Caminhão);
+
+console.log(Lobo instanceof Mamifero);
+console.log(new Lobo(4, "teste") instanceof Mamifero);
