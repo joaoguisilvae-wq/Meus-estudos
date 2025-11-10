@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h2>formulario html</h2>
+    <form action="register.php" method="get" >
+        <div>
+            <label >Nome:</label>
+            <input type="text"/>
+        </div>
+        <div>
+            <label for="age">Idade:</label>
+            <input type="text" name="age"/>
+        </div>
+        <div>
+            <label for="job">Select your profissão:</label>
+            <select name="job">
+                <option value="programador">Programador</option>
+                <option value="tester"selected>Tester/QA</option>
+                <option value="devops">Devops</option>
+            </select>
+        </div>
+        <div>
+            <label for="lanche">Escolha os ingrendientes:</label>
+            <select name="itens" multiple>
+                <option value="picles">Picles</option>
+                <option value="carne">Carne extra</option>
+                <option value="molho">Molho especial</option>
+                <option value="tomate">Tomate</option>
+                <option value="milho">Milho</option>
+            </select>
+        </div>
+        <div>
+            <label for="comentario">oque vc achou</label>
+            <textarea name="comentario"></textarea>
+        </div>
+        <div>
+            <fieldset>
+            <legend>Prencha suas informações:</legend>
+            <label for="name">Nome:</label>
+            <input type="text" name="firsname"/>
+            <label for="lastname">Sobrenome:</label>
+            <input type="text" name="lastname"/>
+            <label for="birthday">Data de nascimento:</label>
+            <input type="date" name="birthday">
+            </fieldset>
+        </div>
+        <div>
+            <label for="flavor">Escolha o sabor:</label>
+            <input type="text" list="flavors" name="flavor"/>
+            <datalist id="flavors">
+                <option value="Cereja"></option>
+                <option value="Morango"></option>
+                <option value="Abacaxi"></option>
+                <option value="Chocolate"></option>
+            </datalist>
+        </div>
+        <div>
+            <label for="passaword">Digite sua senha:</label>
+            <input type="password" name="passaword" >
+        </div>
+        <div>
+            <label for="car_model">Escolha o modelo do seu carro:</label>
+            <div class="radio">
+                <input type="radio" name="car_model" value="bmw">
+                <label for="bmw">BMW</label>
+            </div>
+             <div class="radio">
+                <input type="radio" name="car_model" value="ferrari">
+                <label for="ferrari">Ferrari</label>
+            </div> <div class="radio">
+                <input type="radio" name="car_model" value="nissan">
+                <label for="nissan">Nissan</label>
+            </div>
+        </div>
+        <div>
+            <label for="optionals">Opcionais do carro</label>
+            <div class="radio">
+                <input type="checkbox" name="optionals[]" id="big-tires">
+                <label for="big-tires">Pneus grandes</label>
+            </div>
+            <div class="radio">
+                <input type="checkbox" name="optionals[]" id="turbo-engine">
+                <label for="turbo-engine">Motor turbo</label>
+            </div>
+            <div class="radio">
+                <input type="checkbox" name="optionals[]" id="hybrid">
+                <label for="hybrid">Hibrido</label>
+            </div>
+        </div>
+        <div>
+            <label for="image">
+                <input type="file" name="image">
+            </label>
+        </div>
+        <div>
+            <label for="salary">Quanto voce ganha atualmente?</label>
+            <input type="number" name="salary">
+        </div>
+        <div>
+            <label for="email">Seu melhor email:</label>
+            <input type="email" name="email">
+        </div>
+        <div>
+            <label for="value">Digite um valor:</label>
+            <input type="text" name="value" value="309">
+        </div>
+        <div>
+            <label for="not">Nada aqui</label>
+            <input type="text" name="not" disabled value="Nada aqui">
+        </div>
+        <div>
+            <label for="currentjob">Digiten sua profissão:</label>
+            <input type="text" name="currentjob" placeholder="Qual sua profissão atualmente?">
+        </div>
+        <div>
+            <label for="required">Obrigatorio:</label>
+            <input type="text" name="required" required>
+        </div>
+        <input type="reset" name="limpar">
+        <input type="submit" value="enviar">
+       
+        
+    </form>
+</body>
+</html>

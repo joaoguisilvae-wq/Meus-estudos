@@ -1,0 +1,27 @@
+h1 {
+    color: rgb(212, 35, 29);
+}
+
+@media screen and (max-width: 500px) {
+    h1 {
+        color: blue;
+    }
+}
+p {
+    background-color: brown;
+    color: black;
+}
+@media screen and (min-width: 800px) {
+   p  {
+       background-color: black;
+       color: brown;
+    } 
+}
+h3 {
+    display: none;
+}
+@media screen and (orientation: landscape) {
+    h3 {
+        display: block;
+    }   
+}

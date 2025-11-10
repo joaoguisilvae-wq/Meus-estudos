@@ -1,0 +1,52 @@
+body {
+    background-color: #222;
+    color: rgb(84, 86, 112);
+    text-align: center;
+}
+.title, .main-paragraph {
+    color: #911;
+}
+img {
+    max-width: 800px;
+    max-height: 500px;
+    background-position: center;
+    background-size: cover;
+    margin: 16px;
+}
+.biograph-container {
+    font-size: 20px;
+    border: 2px solid #923;
+    background-color: #215;
+    width: 60%;
+    position: relative;
+    left: 250px;
+    padding: 10px 30px;
+}
+.in-heart {
+    position: relative;
+    bottom: 165px;
+    color: #000;
+    font-size: 30px;
+}
+.bold {
+    font-weight: bold;
+}
+figcaption {
+    margin-bottom: 20px ;
+}
+.curiosites-container {
+    background-color: #215;
+    border-top: 1px dashed #923;
+    max-width: 300px ;
+    border-bottom: 1px dashed #923;
+    padding: 30px;
+    position: relative;
+    left: 500px;
+}
+.espaço {
+    border: 1px solid #000 ;
+}
+.moreinfo-conteiner {
+    border-top:1px dashed #923 ;
+    
+}
