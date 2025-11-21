@@ -4,8 +4,15 @@ console.log(axios);
 // 2 - primeiro request
 const getData = async () => {
   try {
-    const response = await axios.get(
-      "https://jsonplaceholder.typicode.com/users"
+    const response = await postsFetch.get(
+      "/users",
+      // 4 -  configurando headers
+      {
+        headers: {
+          "Content-Type": "application/json",
+          custom: "header",
+        },
+      }
     );
 
     console.log(response);
@@ -27,14 +34,31 @@ const printData = async () => {
   data.forEach((user) => {
     const div = document.createElement("div");
 
-    const nameElement = document.createElement("h2")
+    const nameElement = document.createElement("h2");
 
-    nameElement.textContent = user.name
+    nameElement.textContent = user.name;
 
-    div.appendChild(nameElement)
+    div.appendChild(nameElement);
 
-    contain
+    const emailElement = document.createElement("p");
+
+    emailElement.textContent = user.email;
+
+    div.appendChild(emailElement);
+
+    container.appendChild(div);
   });
 };
 printData();
 
+// 5 - post
+const form = document.querySelector("#post-form");
+const titleInput = document.querySelector("#title");
+const bodyInput = document.querySelector("#body");
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  postsFetch.post("/posts", {
+    body: { title: titleInput.value, body: bodyInput.value, userId: 1 },
+  });
+});
